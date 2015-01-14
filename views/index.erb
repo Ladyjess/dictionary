@@ -1,0 +1,18 @@
+<h1>Dictionary</h1>
+
+<p></p>
+
+<ul>
+  <% @terms.each() do |dictionary_entry| %>
+  <li><%= dictionary_entry.create() %></li>
+  <% end %>
+</ul>
+
+<p></p>
+
+<form action="/terms" method="post">
+  <label for="create">Add a word</label>
+  <input id="create" name="create" type="text">
+
+  <button type="submit">Go!</button>
+</form>
