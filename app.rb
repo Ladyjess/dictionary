@@ -1,10 +1,10 @@
 require("sinatra")
 require("sinatra/reloader")
 also_reload("/lib/**/*.rb")
-require("./lib/dictionary")
+
 
 get("/") do
-  @terms = Term.all()
+  @input = Term.all()
   erb(:index)
 end
 
